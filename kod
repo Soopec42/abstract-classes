@@ -1,0 +1,55 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Xml.Linq;
+using System.Runtime.Remoting.Messaging;
+
+namespace кс2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Vehicle[] vehicles = { new Car(), new Train() };
+
+        }
+    }
+
+    abstract class Vehicle
+    {
+        protected float Speed;
+
+        public abstract void Move();
+
+        public float GetCurrentSpeed()
+        {
+        
+            return Speed;
+        }
+
+
+
+    }
+
+    class Car : Vehicle
+    {
+        public override void Move()
+        {
+            Console.WriteLine("Car drive on street");
+        }
+    }
+
+    class Train : Vehicle
+    {
+        public override void Move()
+        {
+            Console.WriteLine("Train drive on sunding");
+        }
+    }
+
+}
